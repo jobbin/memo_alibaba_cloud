@@ -17,6 +17,29 @@
   * 日志文件延迟4小时，可以在日志管理模块查询到4小时之前的日志文件。
   * 日志文件按小时粒度分割
   * 支持 1月 的日志数据下载
+    * 没有直接存到OSS的设置, 可以自己编写Function Compute的函数来执行
 - [缓存](https://help.aliyun.com/document_detail/27140.html)
   * URL刷新(Max 2000URL) / 目录刷新(Max 100 个刷新请求)
   * URL预热(Max 500URL)
+
+- [变配流程](https://help.aliyun.com/document_detail/27273.html)
+  * 流量和带宽间，流量/带宽 → 月结95带宽 : 第二自然日零点执行该变配
+  * 月结95带宽 →　流量/带宽 : 下个自然月1日零点生效，月中不允许变更
+
+- 计费方式
+  * 基础服务(带宽/流量) + 增值服务
+    * 带宽: 5mごとbandwidthのピーク値を集計 → 288値/日 → Max値
+    * 增值服务:HTTPS加速/全站加速
+
+- ヘルスチェック
+  * 裏では(Layer4 prot80) 2.5s/回、3回利用不可の場合unhealtyと判断
+
+- [缓存配置](https://help.aliyun.com/document_detail/27136.html)
+  * ![atl](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/5147/3383_zh-CN.png)
+
+
+- FAQ
+  * (使用CDN加速的网站如何设置CORS访问)[https://help.aliyun.com/knowledge_detail/40112.html]
+    * CDN控制台上设置的CORS等头部信息对整个加速域名生效，会覆盖掉源站设置的头部信息。<br>って、<font color="red">どうすればいい?</font>
+  * (CDN设置某个目录或文件不缓存)[https://help.aliyun.com/knowledge_detail/40192.html]
+    * 該当ディレクトリのcache expire時間を0にする
