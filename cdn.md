@@ -17,7 +17,7 @@
   * 日志文件延迟4小时，可以在日志管理模块查询到4小时之前的日志文件。
   * 日志文件按小时粒度分割
   * 支持 1月 的日志数据下载
-    * 没有直接存到OSS的设置, 可以自己编写Function Compute的函数来执行
+    * 没有直接存到OSS的设置, 可以配合Function Compute的触发器/函数来执行
 - [缓存](https://help.aliyun.com/document_detail/27140.html)
   * URL刷新(Max 2000URL) / 目录刷新(Max 100 个刷新请求)
   * URL预热(Max 500URL)
