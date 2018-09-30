@@ -7,3 +7,7 @@
 |CDN|CDN 回源|CDN back-to-origin|
 ||Refer防盗链|Anti-Leech|
 ||URL预热|URL push|
+||数据泄密|data leak|
+||木马|Trojan|
+||源站|origin site|
+||CC(ChallengeCollapsar)攻击|HTTP flood|
