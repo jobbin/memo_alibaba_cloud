@@ -12,11 +12,20 @@ TTLあり
     * 1 单位写能力表示向数据表写一条 4 KB 数据。
     * 预留读/写吞吐量あり
 
+[Timeline](https://help.aliyun.com/document_detail/89885.html)
+
+满足消息数据场景对消息保序、海量消息存储、实时同步的特殊需求。
+
+
 Table Store Stream → Lambda 連携
 
 最多可设置 4 个主键，主键的配置及顺序一旦设置便不可修改。
+
 
 VPCのバインド
 
 [キーの設計](https://help.aliyun.com/document_detail/27356.html)
   - ゼロ埋めと「,」の利用
+
+[原子计数器](https://help.aliyun.com/document_detail/90949.html)
+[局部事务(Transaction)](https://help.aliyun.com/document_detail/93819.html)
