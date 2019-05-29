@@ -3,7 +3,7 @@
 ## ECS
 
 インスタンスタイプ
-![alt](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/25374/cn_zh/1518318731933/Image%202.png)
+![alt](https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/25374/cn_zh/1518318731933/Image%202.png)
 
 [突发性能实例](https://help.aliyun.com/document_detail/59977.html)
 
